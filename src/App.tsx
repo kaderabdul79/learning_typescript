@@ -1,22 +1,16 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-
+import {Note} from './models/note.model';
 
 function App() {
-  const [notes,setNotes] = useState<{
-    id: string,
-    title: string,
-    text: string,
-    color: string,
-    date: string
-  }[]>([{
+  const [notes,setNotes] = useState<Note[]>([{
     id: (new Date).toString(),
     title: "Apply for job",
     text: "Junior Full Stack Developer",
     color: "green",
     date: (new Date).toString()
   }])
-  
+
   return (
     <div className="App">
       <Header />
