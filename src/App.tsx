@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import {Note} from './models/note.model';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [notes,setNotes] = useState<Note[]>([{
