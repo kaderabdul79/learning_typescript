@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+
 
 function App() {
+  const [notes,setNotes] = useState<{
+    id: string,
+    title: string,
+    text: string,
+    color: string,
+    date: string
+  }[]>([{
+    id: (new Date).toString(),
+    title: "Apply for job",
+    text: "Junior Full Stack Developer",
+    color: "green",
+    date: (new Date).toString()
+  }])
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
     </div>
   );
 }
